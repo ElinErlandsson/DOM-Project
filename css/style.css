@@ -1,2 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+ul{
+    list-style: none;
+}
+
+.main-container{
+    width: 100%;
+    height: 100%;
+    padding-top: 5rem;
+    background: linear-gradient(0deg, rgba(255,255,255,1) 8%, rgba(0,0,0,1) 98%);
+}
+
+/* ========== Heading ========== */
+
+.header-container{
+    background-color: rgb(29, 28, 27);
+}
+
+.heading{
+    color: orange;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+/* ========== Form ========== */
+
+.form-container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding-top: 5rem;
+}
+
+.form{
+    display: flex;
+    padding: 2rem;
+    background-color: rgb(46, 45, 45);
+    box-shadow: 10px 10px 30px #7d7d83, inset -10px -10px 10px rgb(29, 29, 29), inset 10px 10px 10px #5b5c5c;
+    border-radius: 1rem;
+}
+
+.form-control{
+    margin: 1rem;
+}
+
+.fas{
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.3rem;
+    text-align: center;
+    color: #f0f0f3;
+}
+
+.input{
+    width: 20rem;
+    padding: 0.7rem;
+    font-size: 1.1rem;
+    outline: none;
+    color: #f0f0f3;
+    background-color: rgb(46, 45, 45);
+}
+
+/* ========== Button ========== */
+
+.btn-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn{
+    width: 5rem;
+    height: 5rem;
+    margin: 0 2rem;
+    text-transform: uppercase;
+    background-color: transparent;
+    color: #f0f0f3;
+    border: #000;
+    border-radius: 50%;
+    box-shadow: 5px 5px 10px #000000, -5px -5px 10px #39393a, inset -10px -10px 10px rgb(29, 29, 29), inset 10px 10px 10px #5b5c5c;
+    outline: none;
+}
+
+/* ========== Cards ========== */
+
+.cards-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 3rem;
+}
+
+.card{
+    position: relative;
+    min-width: 20rem;
+    height: 26rem;
+    display: flex;
+    align-items: center;
+    margin: 3rem 5rem;
+    box-shadow: -10px -10px 25px rgb(112, 111, 111),  10px 10px 30px #636363;
+    border-radius: 1rem;
+    background: #f0f0f3;
+}
+
+.img-container{
+    position: absolute;
+    min-width: 17rem;
+    height: 18rem;
+    top: 1rem;
+    right: 1rem;
+    background-image: url(/img/dark-leaf.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 1rem;
+    box-shadow: inset -10px -10px 10px #141414, inset 10px 10px 10px #141414;
+}
+
+.img-container::before{
+    position: absolute;
+    content: '';
+    top: 1rem;
+    left: -1rem;
+    width: 17rem;
+    height: 22rem;
+    border-style: double;
+    border-color: orange;
+}
+
+.info-list{
+    position: absolute;
+    width: 20rem;
+    left: -2rem;
+    padding: 1.5rem 0 1rem 2rem;
+    background: #f0f0f3;
+    box-shadow: 0px 10px 30px #AEAEC0, inset -10px -10px 10px #bfc3c4, inset 10px 10px 10px #fff;
+    border-radius: 1rem;
+    border-left-style: double;
+    border-color: orange;
+    z-index: 5;
+}
+
+.li-wrapper{
+    display: flex;
+    align-items: baseline;
+}
+
+.li-title{
+    width: 3rem;
+    font-weight: 600;
+    color: rgb(2, 48, 40);
+}
+
+.list-items{
+    margin-left: 2rem;
+    padding-bottom: 1rem;
+}
+
+.input-value{
+    font-size: 1.1rem;
+    color: #535353;
+}
