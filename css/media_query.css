@@ -1,0 +1,31 @@
+@media screen and (max-width: 48rem){
+    .form{
+        display: block;
+        padding: .5rem ;  
+    }
+
+    .input-wrapper{
+        padding-bottom: 1rem;
+    }
+
+    .btn-container{
+        margin-bottom: 1.5rem;
+     }
+}
+
+@media screen and (max-width: 30rem){
+    .input{
+        width: 15rem;
+        padding: 0.9rem;
+        font-size: 1.1rem;
+   
+    }
+
+    .heading{
+        font-size: 1.5rem;
+    }
+
+    .info-list{
+        left: -1rem;
+    }
+}

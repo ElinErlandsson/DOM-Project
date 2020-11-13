@@ -1,27 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
-
-*,
-*::before,
-*::after{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body{
-    font-family: 'Roboto', sans-serif;
-}
-
-ul{
-    list-style: none;
-}
 
 .main-container{
     position: relative;
     width: 100%;
     height: 100%;
     padding-top: 5rem;
-    background: linear-gradient(0deg, rgba(255,255,255,1) 8%, rgba(0,0,0,1) 98%);
+    background: linear-gradient(0deg, #fff 8%, #000 98%);
 }
 
 /* ========== Heading ========== */
@@ -32,7 +15,7 @@ ul{
 }
 
 .heading{
-    color: orange;
+    color: var(--primary-clr);
     text-align: center;
     text-transform: uppercase;
     font-weight: 300;
@@ -41,7 +24,7 @@ ul{
 /* ========== Loading box ========== */
 
 .loading-container{
-    display: none;
+    display: none; /* Hide for now */
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -51,8 +34,8 @@ ul{
 .loading-text{
     padding: .8rem 14rem;
     text-align: center;
-    border: orange 1px solid;
-    color: orange;
+    border: var(--primary-clr) 1px solid;
+    color: var(--primary-clr);
     font-size: 1.1rem;
 }
 
@@ -82,7 +65,7 @@ ul{
     height: 2rem;
     font-size: 1.3rem;
     text-align: center;
-    color: #f0f0f3;
+    color: var(--secondary-clr);
 }
 
 .input{
@@ -90,7 +73,7 @@ ul{
     padding: 0.7rem;
     font-size: 1.1rem;
     outline: none;
-    color: #f0f0f3;
+    color: var(--secondary-clr);
     background-color: rgb(46, 45, 45);
 }
 
@@ -119,7 +102,7 @@ ul{
 
 .loading-btn{
     font-size: 0;
-    border: orange solid 3px;
+    border: var(--primary-clr) solid 3px;
     border-left-color: transparent;
     animation: rotate 1.1s ease 0.5s infinite;
     box-shadow: none;
@@ -153,7 +136,7 @@ ul{
     margin: 3rem 5rem;
     box-shadow: -10px -10px 25px rgb(112, 111, 111),  10px 10px 30px #636363;
     border-radius: 1rem;
-    background: #f0f0f3;
+    background: var(--secondary-clr);
     transition: all .2s ease-in-out;
 }
 
@@ -176,11 +159,11 @@ ul{
     width: 20rem;
     left: -2rem;
     padding: 1.5rem 0 1rem 2rem;
-    background: #f0f0f3;
+    background: var(--secondary-clr);
     box-shadow: 0px 10px 30px #AEAEC0, inset -10px -10px 10px #bfc3c4, inset 10px 10px 10px #fff;
     border-radius: 1rem;
     border-left-style: double;
-    border-color: orange;
+    border-color: var(--primary-clr);
     z-index: 5;  
 }
 
@@ -203,36 +186,4 @@ ul{
 .input-value{
     font-size: 1.1rem;
     color: #535353;
-}
-
-@media screen and (max-width: 48rem){
-    .form{
-        display: block;
-        padding: .5rem ;  
-    }
-
-    .input-wrapper{
-        padding-bottom: 1rem;
-    }
-
-    .btn-container{
-        margin-bottom: 1.5rem;
-     }
-}
-
-@media screen and (max-width: 30rem){
-    .input{
-        width: 15rem;
-        padding: 0.9rem;
-        font-size: 1.1rem;
-   
-    }
-
-    .heading{
-        font-size: 1.5rem;
-    }
-
-    .info-list{
-        left: -1rem;
-    }
 }
