@@ -17,6 +17,7 @@ ul{
 }
 
 .main-container{
+    position: relative;
     width: 100%;
     height: 100%;
     padding-top: 5rem;
@@ -27,6 +28,7 @@ ul{
 
 .header-container{
     background-color: rgb(29, 28, 27);
+    margin-bottom: 3rem;
 }
 
 .heading{
@@ -36,13 +38,31 @@ ul{
     font-weight: 300;
 }
 
+/* ========== Loading box ========== */
+
+.loading-container{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 5rem;
+}
+
+.loading-text{
+    padding: .8rem 14rem;
+    text-align: center;
+    border: orange 1px solid;
+    color: orange;
+    font-size: 1.1rem;
+}
+
 /* ========== Form ========== */
 
 .form-container{
     position: relative;
     display: flex;
     justify-content: center;
-    padding-top: 5rem;
+    padding-top: 1rem;
 }
 
 .form{
@@ -88,19 +108,39 @@ ul{
     margin: 0 2rem;
     text-transform: uppercase;
     background-color: transparent;
-    color: #f0f0f3;
-    border: #000;
+    color: #5e5e5f;
     border-radius: 50%;
-    box-shadow: 5px 5px 10px #000000, -5px -5px 10px #39393a, inset -10px -10px 10px rgb(29, 29, 29), inset 10px 10px 10px #5b5c5c;
+    border: none;
+    box-shadow: 5px 5px 10px #000000, 5px 5px 10px #000000, -5px -5px 10px #39393a, inset -10px -10px 10px rgb(29, 29, 29), inset 10px 10px 10px #5b5c5c;
     outline: none;
+    cursor: pointer;
+    transition: all ease 0.5s;
 }
 
+.loading-btn{
+    font-size: 0;
+    border: orange solid 3px;
+    border-left-color: transparent;
+    animation: rotate 1.1s ease 0.5s infinite;
+    box-shadow: none;
+    box-shadow: 5px 5px 5px #e7aa38;
+}
+
+@keyframes rotate{
+    0% { 
+        transform: rotate(0deg);
+    }
+    100% { 
+        transform: rotate(360deg);
+    }
+}
 /* ========== Cards ========== */
 
 .cards-container{
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    flex-wrap: wrap-reverse;
     padding: 3rem;
 }
 
@@ -114,31 +154,21 @@ ul{
     box-shadow: -10px -10px 25px rgb(112, 111, 111),  10px 10px 30px #636363;
     border-radius: 1rem;
     background: #f0f0f3;
+    transition: all .2s ease-in-out;
+}
+
+.card:hover { 
+    transform: scale(1.1); 
 }
 
 .img-container{
     position: absolute;
-    min-width: 17rem;
+    width: 17rem;
     height: 18rem;
     top: 1rem;
     right: 1rem;
-    background-image: url(/img/dark-leaf.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     border-radius: 1rem;
     box-shadow: inset -10px -10px 10px #141414, inset 10px 10px 10px #141414;
-}
-
-.img-container::before{
-    position: absolute;
-    content: '';
-    top: 1rem;
-    left: -1rem;
-    width: 17rem;
-    height: 22rem;
-    border-style: double;
-    border-color: orange;
 }
 
 .info-list{
@@ -151,7 +181,7 @@ ul{
     border-radius: 1rem;
     border-left-style: double;
     border-color: orange;
-    z-index: 5;
+    z-index: 5;  
 }
 
 .li-wrapper{
@@ -173,4 +203,36 @@ ul{
 .input-value{
     font-size: 1.1rem;
     color: #535353;
+}
+
+@media screen and (max-width: 48rem){
+    .form{
+        display: block;
+        padding: .5rem ;  
+    }
+
+    .input-wrapper{
+        padding-bottom: 1rem;
+    }
+
+    .btn-container{
+        margin-bottom: 1.5rem;
+     }
+}
+
+@media screen and (max-width: 30rem){
+    .input{
+        width: 15rem;
+        padding: 0.9rem;
+        font-size: 1.1rem;
+   
+    }
+
+    .heading{
+        font-size: 1.5rem;
+    }
+
+    .info-list{
+        left: -1rem;
+    }
 }
